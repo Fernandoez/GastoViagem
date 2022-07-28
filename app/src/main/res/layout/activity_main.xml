@@ -12,27 +12,32 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/distancia"/>
+        android:minHeight="48dp"
+        android:hint="@string/distancia" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginBottom="15dp"
         android:text="@string/quilometros"/>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/preco"/>
+        android:minHeight="48dp"
+        android:hint="@string/preco" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginBottom="15dp"
         android:text="@string/precolitro"/>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/autonomia"/>
+        android:minHeight="48dp"
+        android:hint="@string/autonomia" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,7 +49,9 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="50dp"
-        android:text="@string/gastototal"/>
+        android:text="@string/gastototal"
+        android:textSize="20dp"
+        android:textAllCaps="true"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,9 +65,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingStart="50dp"
-        android:paddingEnd="50dp"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
         android:backgroundTint="@color/teal_200"
-        android:text="CALCULAR"/>
+        android:text="Calcular"
+        android:textSize="20dp"
+        android:textAllCaps="true"/>
 
 </LinearLayout>
