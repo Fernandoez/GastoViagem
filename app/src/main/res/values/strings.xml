@@ -7,4 +7,6 @@
     <string name="autonomia">Autonomia</string>
     <string name="kmslitro">KMs por litro</string>
     <string name="gastototal">Seu gasto total será de:</string>
+    <string name="resultadovalor">R$ 0</string>
+    <string name="calcular">Calcular</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,64 +11,70 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:hint="@string/distancia" />
+        android:layout_marginTop="15dp"
+        android:hint="@string/distancia"
+        android:minHeight="48dp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginBottom="15dp"
-        android:text="@string/quilometros"/>
+        android:gravity="center"
+        android:text="@string/quilometros" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:hint="@string/preco" />
+        android:hint="@string/preco"
+        android:minHeight="48dp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginBottom="15dp"
-        android:text="@string/precolitro"/>
+        android:gravity="center"
+        android:text="@string/precolitro" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:hint="@string/autonomia" />
+        android:hint="@string/autonomia"
+        android:minHeight="48dp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginBottom="15dp"
-        android:text="@string/kmslitro"/>
+        android:gravity="center"
+        android:text="@string/kmslitro" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginTop="50dp"
+        android:gravity="center"
         android:text="@string/gastototal"
-        android:textSize="20dp"
-        android:textAllCaps="true"/>
+        android:textAllCaps="true"
+        android:textSize="20sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="10dp"
-        android:text="R$ 0"
-        android:textStyle="bold"
+        android:text="@string/resultadovalor"
         android:textColor="@color/purple_700"
-        android:textSize="30dp"/>
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingStart="60dp"
-        android:paddingEnd="60dp"
         android:backgroundTint="@color/teal_200"
-        android:text="Calcular"
-        android:textSize="20dp"
-        android:textAllCaps="true"/>
+        android:padding="18dp"
+        android:text="@string/calcular"
+        android:textAllCaps="true"
+        android:textSize="20sp" />
 
 </LinearLayout>
