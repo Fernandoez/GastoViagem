@@ -27,14 +27,23 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         //da interface OnclickListener da classe View. Portanto a função responsável pelo evento será
         //a Onclick da própria interface.
     }
-
+        //Como os elementos da Activity herdam de uma View, acabam sendo todos do tipo View, por isso
+        //o tipo View como parâmetro da função.
     override fun onClick(view: View) {
+            //R significa Resources, tudo que colocamos nos resources (colors, strings, ids...) podem ser acessados a partir de R.
         if (view.id == R.id.button_calculate)
             calculate();
     }
 
     private fun calculate() {
+
+        val distance = binding.editDistance.text.toString().toFloat()
+        val price = binding.editPrice.text.toString().toFloat()
+        val autonomy = binding.editAutonomy.text.toString().toFloat()
+        val totalValue = (distance*price)/autonomy
+        //String.format(valor que quero que seja formatado conforme informado na string)
+        binding.textTotalValue.text = "R$ ${"%.2f".format(totalValue)}"
         //Toast notification
-        Toast.makeText(this, "Fui clicado!", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "Fui clicado!", Toast.LENGTH_SHORT).show()
     }
 }
