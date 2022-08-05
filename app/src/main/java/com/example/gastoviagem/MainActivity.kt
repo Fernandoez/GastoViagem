@@ -2,9 +2,11 @@ package com.example.gastoviagem
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import com.example.gastoviagem.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
     //ActivityMainBinding classe criada para ajudar mapear os elementos
@@ -20,5 +22,19 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.buttonCalculate.setOnClickListener(this)
+        //forma de chamar o evento ao clicar no botão. Usando o termo 'this' porque fiz um override
+        //da interface OnclickListener da classe View. Portanto a função responsável pelo evento será
+        //a Onclick da própria interface.
+    }
+
+    override fun onClick(view: View) {
+        if (view.id == R.id.button_calculate)
+            calculate();
+    }
+
+    private fun calculate() {
+        //Toast notification
+        Toast.makeText(this, "Fui clicado!", Toast.LENGTH_SHORT).show()
     }
 }
