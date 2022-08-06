@@ -27,22 +27,34 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         //da interface OnclickListener da classe View. Portanto a função responsável pelo evento será
         //a Onclick da própria interface.
     }
-        //Como os elementos da Activity herdam de uma View, acabam sendo todos do tipo View, por isso
-        //o tipo View como parâmetro da função.
+
+    //Como os elementos da Activity herdam de uma View, acabam sendo todos do tipo View, por isso
+    //o tipo View como parâmetro da função.
     override fun onClick(view: View) {
-            //R significa Resources, tudo que colocamos nos resources (colors, strings, ids...) podem ser acessados a partir de R.
+        //R significa Resources, tudo que colocamos nos resources (colors, strings, ids...) podem ser acessados a partir de R.
         if (view.id == R.id.button_calculate)
             calculate();
     }
 
-    private fun calculate() {
+    private fun isValid(): Boolean {
+        return (binding.editDistance.text.toString() != ""
+                && binding.editPrice.text.toString() != ""
+                && binding.editAutonomy.text.toString() != ""
+                && binding.editAutonomy.text.toString().toFloat() != 0f
+                )
+    }
 
-        val distance = binding.editDistance.text.toString().toFloat()
-        val price = binding.editPrice.text.toString().toFloat()
-        val autonomy = binding.editAutonomy.text.toString().toFloat()
-        val totalValue = (distance*price)/autonomy
-        //String.format(valor que quero que seja formatado conforme informado na string)
-        binding.textTotalValue.text = "R$ ${"%.2f".format(totalValue)}"
+    private fun calculate() {
+        if (isValid()) {
+            val distance = binding.editDistance.text.toString().toFloat()
+            val price = binding.editPrice.text.toString().toFloat()
+            val autonomy = binding.editAutonomy.text.toString().toFloat()
+            val totalValue = (distance * price) / autonomy
+            //String.format(valor que quero que seja formatado conforme informado na string)
+            binding.textTotalValue.text = "R$ ${"%.2f".format(totalValue)}"
+        }else{
+            Toast.makeText(this, R.string.validation_fields, Toast.LENGTH_SHORT).show()
+        }
         //Toast notification
         //Toast.makeText(this, "Fui clicado!", Toast.LENGTH_SHORT).show()
     }
